@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,29 +19,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-7n-K1r">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-7n-K1r" userLabel="red">
                                 <rect key="frame" x="0.0" y="0.0" width="125" height="333.5"/>
                                 <color key="backgroundColor" red="1" green="0.081148275490000005" blue="0.04519698715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3m-4d-Gul">
-                                <rect key="frame" x="125" y="250" width="125" height="333.5"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3m-4d-Gul" userLabel="green">
+                                <rect key="frame" x="125" y="0.0" width="125" height="333.5"/>
                                 <color key="backgroundColor" red="0.57116391040000003" green="0.85259472150000004" blue="0.093009535330000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-0j-owF">
-                                <rect key="frame" x="67" y="519" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quq-na-H68">
-                                <rect key="frame" x="67" y="363" width="125" height="333.5"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quq-na-H68" userLabel="blue">
+                                <rect key="frame" x="250" y="0.0" width="125" height="333.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.13037923581908295" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-0j-owF" userLabel="black">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Sh8-0j-owF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="0PY-Jm-Bzv"/>
                             <constraint firstItem="x3m-4d-Gul" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0dj-KI-I2Y"/>
-                            <constraint firstItem="x3m-4d-Gul" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lh4-dS-w23"/>
+                            <constraint firstItem="Sh8-0j-owF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2da-6m-Oan"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sh8-0j-owF" secondAttribute="bottom" id="4Cl-RC-E7P"/>
+                            <constraint firstItem="Sh8-0j-owF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="COZ-qQ-dOc"/>
+                            <constraint firstItem="x3m-4d-Gul" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="172" id="Lh4-dS-w23"/>
                             <constraint firstItem="eRu-7n-K1r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="gEG-yg-kBm"/>
                             <constraint firstItem="eRu-7n-K1r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vX7-Nt-gfX"/>
                         </constraints>
